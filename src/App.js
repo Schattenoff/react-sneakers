@@ -1,28 +1,40 @@
+import React from 'react';
+
 function App() {
   return (
     <div className="wrapper clear">
       <header className="d-flex justify-between align-center p-40">
         <div className="d-flex align-center">
-          <img width={40} height={40} src="/img/logo.png" alt="logo" />
+          <img className='logo' width={40} height={40} src="/img/logo.png" alt="logo" />
           <div>
             <h3 className="text-uppercase">React Sneakers</h3>
-            <p>Магазин лучших кроссовок</p>
+            <p className=''>Магазин лучших кроссовок</p>
           </div>
         </div>
-        <ul className="d-flex">
-          <li className="mr-30">
+        <ul className="ul-nav d-flex justify-between align-center">
+          <li>
             <img width={18} height={18} src="/img/cart.svg" alt="cart" />
-            <span>1205 руб.</span>
+            <span className='sum'>1205 руб.</span>
           </li>
           <li>
-            <img width={20} height={20} src="/img/user.svg" alt="user_icon" />
+            <img width={18} height={18} src="/img/like.svg" alt="like" />
+          </li>
+          <li>
+            <img width={20} height={20} src="/img/user.svg" alt="user_profile" />
           </li>
         </ul>
       </header>
       <div className="content p-40">
-        <h1 className="mb-40">Все кроссовки</h1>
+        <div className='d-flex align-center justify-between'>
+          <h1 className="mb-40">Все кроссовки</h1>
+          <div className="search-block d-flex align-center">
+            <img width={14} height={14} src="/img/search.svg" alt="Search" />
+            <input placeholder='Поиск...' />
+          </div>
+        </div>
         <div className="d-flex justify-between">
           <div className="card">
+            <img src="/img/heart-unliked.svg" alt="Unliked" />
             <img
               width={133}
               height={112}
