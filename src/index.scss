@@ -97,7 +97,6 @@ header {
 }
 
 .overlay {
-  display: none;
   position: absolute;
   left: 0;
   top: 0;
@@ -118,31 +117,72 @@ header {
   display: flex;
   flex-direction: column;
 
+  .items {
+    overflow: auto;
+    margin-bottom: 40px;
+  }
+
   h2 {
+    display: flex;
+    justify-content: space-between;
     font-size: 24px;
     margin-bottom: 30px;
+    img {
+      cursor: pointer;
+    }
   }
 
   .items {
     flex: 1;
   }
 
-  .cart-total-block {
-    li {
-      display: flex;
-      align-items: flex-end;
-      margin-bottom: 20px;
+.cart-total-block {
+    ul {
+      margin-bottom: 40px;
+      li {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 20px;
+      }
+  
+      div {
+        flex: 1;
+        height: 1px;
+        border-bottom: 1px dashed #DFDFDF;
+        position: relative;
+        top: -4px;
+        margin: 0 10px;
+      }
     }
 
-    div {
-      flex: 1;
-      height: 1px;
-      border-bottom: 1px dashed #DFDFDF;
-      position: relative;
-      top: -4px;
-      margin: 0 10px;
+    .greenButton {
+
+      &:hover {
+        img {
+          transform: translateX(5px);
+        }
+      }
+       img {
+         position: absolute;
+         right: 30px;
+         top: 20px;
+         transition: all 0.5s ease;
+       }
     }
-  }
+}
+
+.greenButton {
+    width: 100%;
+    height: 55px;
+    background: #9DD558;
+    border-radius: 18px;
+    border: 0;
+    font-size: 16px;
+    color: #FFF;
+    position: relative;
+    font-weight: 500;
+    cursor: pointer;
+}
 
   .cart-item {
     border: 1px solid #F3F3F3;

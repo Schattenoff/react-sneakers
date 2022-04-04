@@ -5,7 +5,12 @@ function App() {
     <div className="wrapper clear">
       <div className="overlay">
         <div className="drawer">
-          <h2>Корзина</h2>
+            <h2>Корзина <img
+                className="remove-btn"
+                src="/img/btn-remove.svg"
+                alt="Remove"
+              />
+            </h2>
 
           <div className="items">
             <div className="cart-item d-flex align-center justify-between">
@@ -45,7 +50,8 @@ function App() {
               />
             </div>
           </div>
-          <ul className="cart-total-block">
+          <div className="cart-total-block">
+          <ul>
             <li>
               <span>Итого:</span>
               <div></div>
@@ -57,6 +63,9 @@ function App() {
               <b>1074 руб.</b>
             </li>
           </ul>
+          <button className="greenButton">Оформить заказ <img src="/img/arrow_btn.svg" alt="arrow_btn" /></button>
+          </div>
+          
         </div>
       </div>
 
